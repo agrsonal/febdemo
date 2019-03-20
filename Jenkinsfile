@@ -3,6 +3,6 @@ node {
   git 'https://github.com/agrsonal/febdemo'
   }
   stage('Build Package') {
-  echo 'Building.....'
+  build job: 'Dmofreestyle'
   }
  }
