@@ -2,7 +2,12 @@ node {
   stage('SCM Checkout') {
   git 'https://github.com/agrsonal/febdemo'
   }
-  stage('Build Package') {
-  build job: 'Dmofreestyle'
+  triggers { 
+  upstream(upstreamProjects: 'Dmofreestyle', threshold: hudson.model.Result.SUCCESS)
+  }
+  stage('Testing') {
+    steps {
+     echo 'Testing..."
+    }
   }
  }
