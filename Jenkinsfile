@@ -1,4 +1,5 @@
 pipeline {
+  stages { 
   stage('SCM Checkout') {
   git 'https://github.com/agrsonal/febdemo'
   }
@@ -9,5 +10,6 @@ pipeline {
     steps {
      echo 'Testing...'
     }
+  } 
   }
  }
