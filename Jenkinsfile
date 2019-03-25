@@ -5,6 +5,6 @@ node {
   }
   stage('Build Package') {
  // Trigger and build downstream job Dmofreestyle
-      build job: 'Dmofreestyle'
+      //build job: 'Dmofreestyle'
   }
  }
